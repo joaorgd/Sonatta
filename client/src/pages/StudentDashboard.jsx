@@ -13,7 +13,7 @@ function StudentDashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-new-bg text-white-text font-poppins flex">
+    <div className="min-h-screen bg-new-bg text-white-text font-poppins flex flex-col md:flex-row">
       <StudentSidebar />
 
       {/* Conteúdo Principal */}
@@ -26,11 +26,11 @@ function StudentDashboard() {
               Continue sua jornada de aprendizado personalizada. Aqui você encontra suas aulas, suas atividades e seu progresso.
             </p>
           </div>
-          <section className="flex gap-12">
+          <section className="flex flex-col md:flex-row gap-8 md:gap-12 w-full px-4 md:px-0">
             
-             <Link to="/lessons" className="group flex flex-col items-center text-center">
+             <Link to="/lessons" className="group flex flex-col items-center text-center w-full md:w-auto">
               {/* Card Branco do Botão */}
-              <div className="w-[260px] h-[390px] rounded-[15px] bg-white flex flex-col items-center justify-center transition-transform group-hover:scale-105">
+              <div className="w-full md:w-[260px] h-[300px] md:h-[390px] rounded-[15px] bg-white flex flex-col items-center justify-center transition-transform group-hover:scale-105">
                 <img 
                   src="/assets/Minhas Aulas.png" // Substitua pelo caminho da sua nova imagem sem fundo
                   alt="Minhas Aulas" 
@@ -40,9 +40,9 @@ function StudentDashboard() {
               <span className="opacity-0 group-hover:opacity-100 transition-opacity font-semibold text-lg mt-4 text-white-text">Minhas Aulas</span>
             </Link>
             
-            <Link to="/practice" className="group flex flex-col items-center text-center">
+            <Link to="/practice" className="group flex flex-col items-center text-center w-full md:w-auto">
               {/* Card Branco do Botão */}
-              <div className="w-[260px] h-[390px] rounded-[15px] bg-white flex flex-col items-center justify-center transition-transform group-hover:scale-105">
+              <div className="w-full md:w-[260px] h-[300px] md:h-[390px] rounded-[15px] bg-white flex flex-col items-center justify-center transition-transform group-hover:scale-105">
                 <img 
                   src="/assets/Praticar.png" // Substitua pelo caminho da sua nova imagem sem fundo
                   alt="Praticar" 

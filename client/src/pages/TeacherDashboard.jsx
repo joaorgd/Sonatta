@@ -13,7 +13,7 @@ function TeacherDashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-new-bg text-white-text font-poppins flex">
+    <div className="min-h-screen bg-new-bg text-white-text font-poppins flex flex-col md:flex-row">
       <TeacherSidebar />
 
       {/* Conteúdo Principal */}
@@ -26,10 +26,10 @@ function TeacherDashboard() {
               Gerencie suas turmas, crie conteúdos e acompanhe o progresso de seus alunos.
             </p>
           </div>
-          <section className="flex gap-12">
+          <section className="flex flex-col md:flex-row gap-8 md:gap-12 w-full px-4 md:px-0">
 
-            <Link to="/teacher/management" className="group flex flex-col items-center text-center">
-              <div className="w-[260px] h-[390px] rounded-[15px] bg-white flex flex-col items-center justify-center transition-transform group-hover:scale-105">
+            <Link to="/teacher/management" className="group flex flex-col items-center text-center w-full md:w-auto">
+              <div className="w-full md:w-[260px] h-[300px] md:h-[390px] rounded-[15px] bg-white flex flex-col items-center justify-center transition-transform group-hover:scale-105">
                 <img 
                   src="/assets/Gerenciamento.png" // Substitua pela sua imagem sem fundo
                   alt="Gerenciamento" 
@@ -39,8 +39,8 @@ function TeacherDashboard() {
               <span className="opacity-0 group-hover:opacity-100 transition-opacity font-semibold text-lg mt-4 text-white-text">Gerenciamento</span>
             </Link>
             
-            <Link to="/teacher/overview" className="group flex flex-col items-center text-center">
-              <div className="w-[260px] h-[390px] rounded-[15px] bg-white flex flex-col items-center justify-center transition-transform group-hover:scale-105">
+            <Link to="/teacher/overview" className="group flex flex-col items-center text-center w-full md:w-auto">
+              <div className="w-full md:w-[260px] h-[300px] md:h-[390px] rounded-[15px] bg-white flex flex-col items-center justify-center transition-transform group-hover:scale-105">
                 <img 
                   src="/assets/Overview.png" // Substitua pela sua imagem sem fundo
                   alt="Visão Geral" 
