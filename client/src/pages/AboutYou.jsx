@@ -27,7 +27,11 @@ function AboutYou() {
         role: 'aprender', // Definido como 'aprender' por padrão
       });
       console.log('Perfil do usuário atualizado com sucesso:', response.data);
-      navigate('/musical-profile');
+      
+      // *** ALTERAÇÃO AQUI ***
+      // Navega para o dashboard do aluno e passa um estado para mostrar o modal
+      navigate('/student-dashboard', { state: { showProfileModal: true } });
+
     } catch (error) {
       console.error('Erro ao atualizar o perfil:', error.response ? error.response.data.message : error.message);
       alert(`Erro ao salvar seu perfil: ${error.response ? error.response.data.message : 'Tente novamente.'}`);
